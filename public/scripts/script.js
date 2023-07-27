@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
 })
 
 function updatePost() {
-  fetch('https://mural-amber-seven.vercel.app/api/all')
+  fetch('https://mural-6klwmn3s7-henbatista.vercel.app/api/all')
     .then(res => {
       return res.json()
     })
@@ -45,10 +45,12 @@ function newPost() {
     body: JSON.stringify(post)
   }
 
-  fetch('https://mural-amber-seven.vercel.app/api/new', options).then(res => {
-    console.log(res)
-    updatePost()
-    document.getElementById('title').value = ''
-    document.getElementById('desc').value = ''
-  })
+  fetch('https://mural-6klwmn3s7-henbatista.vercel.app/api/new', options).then(
+    res => {
+      console.log(res)
+      updatePost()
+      document.getElementById('title').value = ''
+      document.getElementById('desc').value = ''
+    }
+  )
 }
