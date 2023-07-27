@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
 })
 
 function updatePost() {
-  fetch('http://192.168.7.4:3000/api/all')
+  fetch('https://mural-amber-seven.vercel.app/api/all')
     .then(res => {
       return res.json()
     })
@@ -45,7 +45,7 @@ function newPost() {
     body: JSON.stringify(post)
   }
 
-  fetch('http://192.168.7.4:3000/api/new', options).then(res => {
+  fetch('https://mural-amber-seven.vercel.app/api/new', options).then(res => {
     console.log(res)
     updatePost()
     document.getElementById('title').value = ''
